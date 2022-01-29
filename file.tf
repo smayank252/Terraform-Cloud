@@ -4,7 +4,6 @@ terraform {
     bucket  = "mayank-terraform-state-file"
     key     = "new-state/terraform.tfstate"
     region  = "us-east-1"
-    profile = "mayank"
     
   }
   required_version = "~>1.1.3"
@@ -19,7 +18,7 @@ terraform {
 # Provider Block 
 provider "aws" {
   region  = "us-east-1"
-  profile = "mayank"
+  profile = "default"
 }
 
 resource "aws_instance" "terraform-publc-instance" {
